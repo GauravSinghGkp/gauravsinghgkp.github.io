@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GauravDev - Android Developer</title>
+    <meta
+      name="description"
+      content="GauravDev - Independent Android App Developer. Creator of SpendWise and other useful mobile applications."
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, sans-serif;
+        background: linear-gradient(
+          135deg,
+          #1a1a2e 0%,
+          #16213e 50%,
+          #0f3460 100%
+        );
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+      }
+
+      .container {
+        text-align: center;
+        padding: 40px;
+        max-width: 600px;
+      }
+
+      .logo {
+        width: 120px;
+        height: 120px;
+        background: linear-gradient(135deg, #00d9a5 0%, #00b894 100%);
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 30px;
+        font-size: 48px;
+        font-weight: bold;
+        box-shadow: 0 10px 40px rgba(0, 217, 165, 0.3);
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+        background: linear-gradient(90deg, #00d9a5, #00b894);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .tagline {
+        font-size: 1.2rem;
+        color: #a0a0a0;
+        margin-bottom: 40px;
+      }
+
+      .apps-section h2 {
+        font-size: 1rem;
+        color: #888;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+      }
+
+      .app-card {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 16px;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .app-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      }
+
+      .app-icon {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #2ecc71, #27ae60);
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+      }
+
+      .app-info {
+        text-align: left;
+      }
+
+      .app-name {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 5px;
+      }
+
+      .app-desc {
+        font-size: 0.9rem;
+        color: #888;
+      }
+
+      .play-badge {
+        margin-left: auto;
+        background: #00d9a5;
+        color: #1a1a2e;
+        padding: 8px 16px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.85rem;
+        transition: background 0.3s;
+      }
+
+      .play-badge:hover {
+        background: #00b894;
+      }
+
+      footer {
+        margin-top: 50px;
+        color: #666;
+        font-size: 0.85rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">G</div>
+      <h1>GauravDev</h1>
+      <p class="tagline">Independent Android Developer</p>
+
+      <div class="apps-section">
+        <h2>My Apps</h2>
+        <div class="app-card">
+          <div class="app-icon">💰</div>
+          <div class="app-info">
+            <div class="app-name">SpendWise</div>
+            <div class="app-desc">Smart expense tracking made simple</div>
+          </div>
+          <a
+            href="https://play.google.com/store/apps/details?id=com.gauravdev.spendwise"
+            class="play-badge"
+            target="_blank"
+            >Get it</a
+          >
+        </div>
+      </div>
+
+      <footer>
+        <p>© 2024 GauravDev. All rights reserved.</p>
+      </footer>
+    </div>
+  </body>
+</html>
