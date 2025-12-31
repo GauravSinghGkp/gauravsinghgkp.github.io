@@ -3,16 +3,76 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GauravDev - React Native & Android Developer</title>
+
+    <!-- Primary SEO Meta Tags -->
+    <title>
+      Soflyx - Software Apps with Beautiful UI/UX | SpendWise Expense Tracker
+    </title>
+    <meta
+      name="title"
+      content="Soflyx - Software Apps with Beautiful UI/UX | SpendWise Expense Tracker"
+    />
     <meta
       name="description"
-      content="GauravDev - React Native & Android App Developer. Creator of SpendWise and other useful mobile applications."
+      content="Soflyx creates beautiful, useful mobile applications with exceptional UI/UX. Download SpendWise - the smart expense tracking app. React Native & Android development."
     />
+    <meta
+      name="keywords"
+      content="Soflyx, SpendWise, expense tracker, expense tracking app, mobile apps, UI/UX design, React Native, Android apps, software development, app development company"
+    />
+    <meta name="author" content="Soflyx" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://gauravsinghgkp.github.io/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://gauravsinghgkp.github.io/" />
+    <meta
+      property="og:title"
+      content="Soflyx - Software Apps with Beautiful UI/UX"
+    />
+    <meta
+      property="og:description"
+      content="Soflyx creates beautiful, useful mobile applications. Download SpendWise - smart expense tracking made simple."
+    />
+    <meta
+      property="og:image"
+      content="https://gauravsinghgkp.github.io/assets/icons/Soflyx.png"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://gauravsinghgkp.github.io/" />
+    <meta
+      property="twitter:title"
+      content="Soflyx - Software Apps with Beautiful UI/UX"
+    />
+    <meta
+      property="twitter:description"
+      content="Soflyx creates beautiful, useful mobile applications. Download SpendWise - smart expense tracking made simple."
+    />
+    <meta
+      property="twitter:image"
+      content="https://gauravsinghgkp.github.io/assets/icons/Soflyx.png"
+    />
+
+    <!-- Google Site Verification -->
     <meta
       name="google-site-verification"
       content="Rn9xZObQFNooVEiysz92vjkrzoGGm8_YMZQprrCaWfs"
     />
-    <link rel="icon" type="image/png" href="./assets/icons/GauravDev.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./assets/icons/Soflyx.png" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
     <style>
       * {
         margin: 0;
@@ -20,259 +80,1004 @@
         box-sizing: border-box;
       }
 
+      html {
+        scroll-behavior: smooth;
+      }
+
       body {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-          Oxygen, Ubuntu, sans-serif;
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, sans-serif;
+        background: #0a0a0f;
+        color: #ffffff;
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      /* Animated Background */
+      .bg-gradient {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(
+            ellipse at 20% 20%,
+            rgba(99, 102, 241, 0.15) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            ellipse at 80% 80%,
+            rgba(168, 85, 247, 0.15) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            ellipse at 50% 50%,
+            rgba(59, 130, 246, 0.1) 0%,
+            transparent 70%
+          );
+        z-index: -1;
+        animation: gradientShift 15s ease-in-out infinite;
+      }
+
+      @keyframes gradientShift {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.7;
+        }
+      }
+
+      /* Navigation */
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        padding: 1rem 2rem;
+        backdrop-filter: blur(20px);
+        background: rgba(10, 10, 15, 0.8);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        transition: all 0.3s ease;
+      }
+
+      .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo-container {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .logo-img {
+        width: 42px;
+        height: 42px;
+        border-radius: 12px;
+        object-fit: cover;
+      }
+
+      .logo-text {
+        font-size: 1.5rem;
+        font-weight: 700;
         background: linear-gradient(
           135deg,
-          #1a1a2e 0%,
-          #16213e 50%,
-          #0f3460 100%
+          #a855f7 0%,
+          #6366f1 50%,
+          #3b82f6 100%
         );
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #fff;
-      }
-
-      .container {
-        text-align: center;
-        padding: 40px;
-        max-width: 600px;
-      }
-
-      .logo {
-        width: 120px;
-        height: 120px;
-        background: linear-gradient(135deg, #00d9a5 0%, #00b894 100%);
-        border-radius: 30px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto 30px;
-        font-size: 48px;
-        font-weight: bold;
-        box-shadow: 0 10px 40px rgba(0, 217, 165, 0.3);
-      }
-
-      h1 {
-        font-size: 2.5rem;
-        margin-bottom: 10px;
-        background: linear-gradient(90deg, #00d9a5, #00b894);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
       }
 
-      .tagline {
-        font-size: 1.2rem;
-        color: #a0a0a0;
-        margin-bottom: 15px;
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
       }
 
+      .nav-links a {
+        color: #94a3b8;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 0.95rem;
+        transition: color 0.3s ease;
+        position: relative;
+      }
+
+      .nav-links a::after {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(90deg, #a855f7, #6366f1);
+        transition: width 0.3s ease;
+      }
+
+      .nav-links a:hover {
+        color: #ffffff;
+      }
+
+      .nav-links a:hover::after {
+        width: 100%;
+      }
+
+      /* Mobile Menu */
+      .mobile-menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 8px;
+      }
+
+      .mobile-menu-btn span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: #ffffff;
+        margin: 6px 0;
+        transition: all 0.3s ease;
+      }
+
+      /* Sections */
+      section {
+        padding: 100px 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      /* Hero Section */
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-top: 120px;
+      }
+
+      .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 16px;
+        background: rgba(168, 85, 247, 0.1);
+        border: 1px solid rgba(168, 85, 247, 0.3);
+        border-radius: 50px;
+        font-size: 0.875rem;
+        color: #a855f7;
+        margin-bottom: 1.5rem;
+        animation: fadeInUp 0.8s ease;
+      }
+
+      .hero-badge::before {
+        content: "✨";
+      }
+
+      .hero h1 {
+        font-size: clamp(2.5rem, 8vw, 4.5rem);
+        font-weight: 800;
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+        animation: fadeInUp 0.8s ease 0.1s backwards;
+      }
+
+      .hero h1 .gradient-text {
+        background: linear-gradient(
+          135deg,
+          #a855f7 0%,
+          #6366f1 50%,
+          #3b82f6 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .hero-subtitle {
+        font-size: 1.25rem;
+        color: #94a3b8;
+        max-width: 600px;
+        margin-bottom: 2.5rem;
+        animation: fadeInUp 0.8s ease 0.2s backwards;
+      }
+
+      .hero-cta {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        animation: fadeInUp 0.8s ease 0.3s backwards;
+      }
+
+      .btn {
+        padding: 14px 32px;
+        border-radius: 12px;
+        font-weight: 600;
+        font-size: 1rem;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, #a855f7 0%, #6366f1 100%);
+        color: #ffffff;
+        box-shadow: 0 8px 32px rgba(168, 85, 247, 0.3);
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 40px rgba(168, 85, 247, 0.4);
+      }
+
+      .btn-secondary {
+        background: rgba(255, 255, 255, 0.05);
+        color: #ffffff;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .btn-secondary:hover {
+        background: rgba(255, 255, 255, 0.1);
+        transform: translateY(-2px);
+      }
+
+      /* Section Headers */
+      .section-header {
+        text-align: center;
+        margin-bottom: 4rem;
+      }
+
+      .section-label {
+        display: inline-block;
+        padding: 6px 16px;
+        background: rgba(99, 102, 241, 0.1);
+        border: 1px solid rgba(99, 102, 241, 0.2);
+        border-radius: 50px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: #818cf8;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 1rem;
+      }
+
+      .section-title {
+        font-size: clamp(2rem, 5vw, 3rem);
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      .section-subtitle {
+        font-size: 1.1rem;
+        color: #94a3b8;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      /* About Section */
+      .about-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      .about-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 20px;
+        padding: 2rem;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .about-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, #a855f7, #6366f1, #3b82f6);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .about-card:hover {
+        transform: translateY(-4px);
+        background: rgba(255, 255, 255, 0.05);
+        border-color: rgba(168, 85, 247, 0.2);
+      }
+
+      .about-card:hover::before {
+        opacity: 1;
+      }
+
+      .about-icon {
+        width: 56px;
+        height: 56px;
+        background: linear-gradient(
+          135deg,
+          rgba(168, 85, 247, 0.2),
+          rgba(99, 102, 241, 0.2)
+        );
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .about-card h3 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+      }
+
+      .about-card p {
+        color: #94a3b8;
+        font-size: 0.95rem;
+        line-height: 1.7;
+      }
+
+      /* Tech Stack */
       .tech-stack {
         display: flex;
-        gap: 10px;
-        justify-content: center;
-        margin-bottom: 40px;
         flex-wrap: wrap;
+        gap: 12px;
+        justify-content: center;
+        margin-top: 3rem;
       }
 
       .tech-badge {
-        background: rgba(0, 217, 165, 0.15);
-        border: 1px solid rgba(0, 217, 165, 0.3);
-        color: #00d9a5;
-        padding: 6px 14px;
-        border-radius: 20px;
-        font-size: 0.85rem;
+        padding: 10px 20px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 50px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: #e2e8f0;
+        transition: all 0.3s ease;
       }
 
-      .apps-section h2 {
-        font-size: 1rem;
-        color: #888;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        margin-bottom: 20px;
+      .tech-badge:hover {
+        background: rgba(168, 85, 247, 0.1);
+        border-color: rgba(168, 85, 247, 0.3);
+        color: #a855f7;
       }
 
-      .app-card {
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 16px;
-        padding: 20px;
-        display: flex;
+      /* Products Section */
+      .products-grid {
+        display: grid;
+        gap: 2rem;
+      }
+
+      .product-card {
+        background: linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.05),
+          rgba(255, 255, 255, 0.02)
+        );
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 24px;
+        padding: 2.5rem;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        gap: 2rem;
         align-items: center;
-        gap: 15px;
-        transition: transform 0.3s, box-shadow 0.3s;
-      }
-
-      .app-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-      }
-
-      .app-icon {
-        width: 60px;
-        height: 60px;
-        border-radius: 14px;
+        transition: all 0.4s ease;
+        position: relative;
         overflow: hidden;
-        flex-shrink: 0;
       }
 
-      .app-icon img {
+      .product-card::before {
+        content: "";
+        position: absolute;
+        top: -100%;
+        left: -100%;
+        width: 300%;
+        height: 300%;
+        background: radial-gradient(
+          circle,
+          rgba(168, 85, 247, 0.1) 0%,
+          transparent 50%
+        );
+        opacity: 0;
+        transition: opacity 0.4s ease;
+      }
+
+      .product-card:hover::before {
+        opacity: 1;
+      }
+
+      .product-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(168, 85, 247, 0.3);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      }
+
+      .product-icon {
+        width: 100px;
+        height: 100px;
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        position: relative;
+        z-index: 1;
+      }
+
+      .product-icon img {
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
 
-      .app-info {
-        text-align: left;
-        flex: 1;
+      .product-info {
+        position: relative;
+        z-index: 1;
       }
 
-      .app-name {
-        font-size: 1.2rem;
-        font-weight: 600;
-        margin-bottom: 5px;
+      .product-name {
+        font-size: 1.75rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
       }
 
-      .app-desc {
-        font-size: 0.9rem;
-        color: #888;
+      .product-tagline {
+        font-size: 1rem;
+        color: #a855f7;
+        margin-bottom: 1rem;
+        font-weight: 500;
       }
 
-      .play-badge {
-        background: #00d9a5;
-        color: #1a1a2e;
-        padding: 10px 18px;
-        border-radius: 8px;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 0.85rem;
-        transition: background 0.3s, transform 0.2s;
+      .product-desc {
+        color: #94a3b8;
+        line-height: 1.7;
+        margin-bottom: 1.5rem;
+      }
+
+      .product-features {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .feature-tag {
+        padding: 6px 14px;
+        background: rgba(168, 85, 247, 0.1);
+        border-radius: 20px;
+        font-size: 0.8rem;
+        color: #c4b5fd;
+      }
+
+      .product-cta {
+        position: relative;
+        z-index: 1;
+      }
+
+      .play-store-btn {
         display: inline-flex;
         align-items: center;
-        gap: 6px;
+        gap: 12px;
+        padding: 16px 28px;
+        background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+        border-radius: 14px;
+        text-decoration: none;
+        color: #ffffff;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        box-shadow: 0 8px 24px rgba(34, 197, 94, 0.3);
       }
 
-      .play-badge:hover {
-        background: #00b894;
+      .play-store-btn:hover {
         transform: scale(1.05);
+        box-shadow: 0 12px 32px rgba(34, 197, 94, 0.4);
       }
 
-      .play-badge svg {
-        width: 16px;
-        height: 16px;
+      .play-store-btn svg {
+        width: 24px;
+        height: 24px;
       }
 
+      .coming-soon-card {
+        background: rgba(255, 255, 255, 0.02);
+        border: 2px dashed rgba(255, 255, 255, 0.1);
+        border-radius: 24px;
+        padding: 3rem;
+        text-align: center;
+      }
+
+      .coming-soon-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        color: #64748b;
+      }
+
+      .coming-soon-card p {
+        color: #475569;
+      }
+
+      /* Contact Section */
+      .contact-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+
+      .contact-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 20px;
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .contact-card:hover {
+        background: rgba(255, 255, 255, 0.06);
+        border-color: rgba(168, 85, 247, 0.3);
+        transform: translateY(-4px);
+      }
+
+      .contact-icon {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(
+          135deg,
+          rgba(168, 85, 247, 0.2),
+          rgba(99, 102, 241, 0.2)
+        );
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        flex-shrink: 0;
+      }
+
+      .contact-info h3 {
+        font-size: 0.9rem;
+        color: #64748b;
+        font-weight: 500;
+        margin-bottom: 4px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .contact-info p {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #ffffff;
+      }
+
+      /* Footer */
       footer {
+        padding: 3rem 2rem;
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
         margin-top: 50px;
-        color: #666;
-        font-size: 0.85rem;
+      }
+
+      .footer-logo {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 1.5rem;
+      }
+
+      .footer-logo img {
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+      }
+
+      .footer-logo span {
+        font-size: 1.25rem;
+        font-weight: 700;
+        background: linear-gradient(135deg, #a855f7, #6366f1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
       }
 
       .social-links {
         display: flex;
         justify-content: center;
-        gap: 15px;
-        margin-bottom: 15px;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
       }
 
       .social-links a {
-        color: #888;
+        width: 44px;
+        height: 44px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #94a3b8;
         text-decoration: none;
-        transition: color 0.3s;
+        transition: all 0.3s ease;
       }
 
       .social-links a:hover {
-        color: #00d9a5;
+        background: rgba(168, 85, 247, 0.2);
+        border-color: rgba(168, 85, 247, 0.4);
+        color: #a855f7;
+        transform: translateY(-2px);
       }
 
-      @media (max-width: 480px) {
-        .container {
-          padding: 20px;
+      .footer-text {
+        color: #475569;
+        font-size: 0.9rem;
+      }
+
+      /* Animations */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        nav {
+          padding: 1rem;
         }
 
-        h1 {
-          font-size: 2rem;
-        }
-
-        .app-card {
+        .nav-links {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          background: rgba(10, 10, 15, 0.98);
           flex-direction: column;
-          text-align: center;
+          padding: 1rem;
+          gap: 0;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        .app-info {
+        .nav-links.active {
+          display: flex;
+        }
+
+        .nav-links li {
+          padding: 1rem;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .nav-links li:last-child {
+          border-bottom: none;
+        }
+
+        .mobile-menu-btn {
+          display: block;
+        }
+
+        section {
+          padding: 60px 1.5rem;
+        }
+
+        .hero {
+          padding-top: 100px;
+        }
+
+        .product-card {
+          grid-template-columns: 1fr;
+          text-align: center;
+          padding: 2rem;
+        }
+
+        .product-icon {
+          margin: 0 auto;
+        }
+
+        .product-features {
+          justify-content: center;
+        }
+
+        .product-cta {
+          margin-top: 1rem;
+        }
+
+        .contact-card {
+          flex-direction: column;
           text-align: center;
         }
       }
     </style>
   </head>
   <body>
-    <div class="container">
-      <div class="logo">
-        <img
-          src="./assets/icons/GauravDev.png"
-          alt="GauravDev Logo"
-          style="
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 30px;
-          "
-        />
-      </div>
-      <h1>GauravDev</h1>
-      <p class="tagline">React Native & Android Developer</p>
+    <div class="bg-gradient"></div>
 
-      <div class="tech-stack">
-        <span class="tech-badge">React Native</span>
-        <span class="tech-badge">Expo</span>
-        <span class="tech-badge">TypeScript</span>
-        <span class="tech-badge">Android</span>
+    <!-- Navigation -->
+    <nav>
+      <div class="nav-container">
+        <a href="#" class="logo-container">
+          <img
+            src="./assets/icons/Soflyx.png"
+            alt="Soflyx Logo"
+            class="logo-img"
+          />
+          <span class="logo-text">Soflyx</span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button
+          class="mobile-menu-btn"
+          id="mobileMenuBtn"
+          aria-label="Toggle menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <span class="hero-badge">Luxury Software Experience</span>
+      <h1>
+        Simple Apps,<br />
+        <span class="gradient-text">Powerful Results</span>
+      </h1>
+      <p class="hero-subtitle">
+        Soflyx crafts software that's effortlessly simple yet incredibly
+        powerful. We believe great apps should feel like luxury—beautiful,
+        intuitive, and a joy to use.
+      </p>
+      <div class="hero-cta">
+        <a href="#products" class="btn btn-primary">
+          <svg
+            width="20"
+            height="20"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+          View Our Apps
+        </a>
+        <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <div class="section-header">
+        <span class="section-label">About Us</span>
+        <h2 class="section-title">Why Choose Soflyx?</h2>
+        <p class="section-subtitle">
+          We're passionate about creating software that makes a real difference
+          in people's daily lives.
+        </p>
       </div>
 
-      <div class="apps-section">
-        <h2>My Apps</h2>
-        <div class="app-card">
-          <div class="app-icon">
+      <div class="about-grid">
+        <div class="about-card">
+          <div class="about-icon">🎨</div>
+          <h3>Stunning UI/UX</h3>
+          <p>
+            Every app we build features beautiful, intuitive interfaces that
+            users love. Design isn't an afterthought—it's our foundation.
+          </p>
+        </div>
+        <div class="about-card">
+          <div class="about-icon">⚡</div>
+          <h3>Lightning Fast</h3>
+          <p>
+            Performance matters. Our apps are optimized for speed and
+            efficiency, delivering smooth experiences on any device.
+          </p>
+        </div>
+        <div class="about-card">
+          <div class="about-icon">🛡️</div>
+          <h3>Built to Last</h3>
+          <p>
+            We use modern technologies and best practices to create apps that
+            are reliable, secure, and easy to maintain.
+          </p>
+        </div>
+        <div class="about-card">
+          <div class="about-icon">💡</div>
+          <h3>User-Focused</h3>
+          <p>
+            We listen to our users. Every feature is designed with real needs in
+            mind, solving actual problems effectively.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products">
+      <div class="section-header">
+        <span class="section-label">Our Products</span>
+        <h2 class="section-title">Apps We've Created</h2>
+        <p class="section-subtitle">
+          Check out our apps designed to make your life easier and more
+          organized.
+        </p>
+      </div>
+
+      <div class="products-grid">
+        <article class="product-card">
+          <div class="product-icon">
             <img
               src="./assets/icons/spendwise-icon.png"
               alt="SpendWise App Icon"
             />
           </div>
-          <div class="app-info">
-            <div class="app-name">SpendWise</div>
-            <div class="app-desc">Smart expense tracking made simple</div>
+          <div class="product-info">
+            <h3 class="product-name">SpendWise</h3>
+            <p class="product-tagline">Smart Expense Tracking Made Simple</p>
+            <p class="product-desc">
+              Take control of your finances with SpendWise. Track your daily
+              expenses, set budgets, and visualize your spending habits with
+              beautiful charts and insights.
+            </p>
+            <div class="product-features">
+              <span class="feature-tag">Expense Tracking</span>
+              <span class="feature-tag">Budget Goals</span>
+              <span class="feature-tag">Visual Reports</span>
+              <span class="feature-tag">Dark Mode</span>
+            </div>
           </div>
-          <a
-            href="https://play.google.com/store/apps/details?id=com.gauravdev.spendwise"
-            class="play-badge"
-            target="_blank"
-            rel="noopener"
-          >
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M3 20.5v-17c0-.83.52-1.28 1.21-.87l14.14 8.5c.7.42.7 1.32 0 1.74l-14.14 8.5c-.69.41-1.21-.04-1.21-.87z"
-              />
-            </svg>
-            Get it
-          </a>
+          <div class="product-cta">
+            <a
+              href="https://play.google.com/store/apps/details?id=com.gauravdev.spendwise"
+              class="play-store-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Download SpendWise on Google Play Store"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 9.99l-2.302 2.302-8.634-8.634z"
+                />
+              </svg>
+              Get on Play Store
+            </a>
+          </div>
+        </article>
+
+        <div class="coming-soon-card">
+          <h3>🚀 More Apps Coming Soon</h3>
+          <p>We're working on exciting new apps. Stay tuned!</p>
         </div>
       </div>
+    </section>
 
-      <footer>
-        <div class="social-links">
-          <a
-            href="https://github.com/GauravSinghGkp"
-            target="_blank"
-            rel="noopener"
-            >GitHub</a
-          >
-        </div>
-        <p>© 2024 GauravDev. All rights reserved.</p>
-      </footer>
-    </div>
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="section-header">
+        <span class="section-label">Contact Us</span>
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="section-subtitle">
+          Have a question or want to work together? We'd love to hear from you.
+        </p>
+      </div>
+
+      <div class="contact-container">
+        <a href="tel:+918707057515" class="contact-card">
+          <div class="contact-icon">📱</div>
+          <div class="contact-info">
+            <h3>Phone</h3>
+            <p>+91 8707057515</p>
+          </div>
+        </a>
+        <a href="mailto:contact@soflyx.com" class="contact-card">
+          <div class="contact-icon">✉️</div>
+          <div class="contact-info">
+            <h3>Email</h3>
+            <p>contact@soflyx.com</p>
+          </div>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/gauravsinghgkp"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="contact-card"
+        >
+          <div class="contact-icon">💼</div>
+          <div class="contact-info">
+            <h3>LinkedIn</h3>
+            <p>@gauravsinghgkp</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-logo">
+        <img src="./assets/icons/Soflyx.png" alt="Soflyx" />
+        <span>Soflyx</span>
+      </div>
+      <div class="social-links">
+        <a
+          href="https://www.linkedin.com/in/gauravsinghgkp"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+        >
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+            />
+          </svg>
+        </a>
+      </div>
+      <p class="footer-text">
+        © <span id="currentYear"></span> Soflyx. All rights reserved.
+      </p>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+      const navLinks = document.getElementById("navLinks");
+
+      mobileMenuBtn.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+
+      // Close mobile menu when clicking a link
+      navLinks.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navLinks.classList.remove("active");
+        });
+      });
+
+      // Navbar background on scroll
+      window.addEventListener("scroll", () => {
+        const nav = document.querySelector("nav");
+        if (window.scrollY > 50) {
+          nav.style.background = "rgba(10, 10, 15, 0.95)";
+        } else {
+          nav.style.background = "rgba(10, 10, 15, 0.8)";
+        }
+      });
+      // Dynamic year in footer
+      document.getElementById("currentYear").textContent =
+        new Date().getFullYear();
+    </script>
   </body>
 </html>
