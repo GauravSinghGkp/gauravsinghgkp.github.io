@@ -248,6 +248,23 @@
         align-items: center;
         text-align: center;
         padding-top: 120px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      #particleCanvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 1;
+      }
+
+      .hero > *:not(#particleCanvas) {
+        position: relative;
+        z-index: 2;
       }
 
       .hero-badge {
@@ -851,6 +868,7 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
+      <canvas id="particleCanvas"></canvas>
       <span class="hero-badge">Luxury Software Experience</span>
       <h1>
         Simple Apps,<br />
@@ -1078,6 +1096,71 @@
       // Dynamic year in footer
       document.getElementById("currentYear").textContent =
         new Date().getFullYear();
+
+      // Particle Effect
+      const canvas = document.getElementById("particleCanvas");
+      const ctx = canvas.getContext("2d");
+      let particles = [];
+      let mouse = { x: null, y: null };
+      const heroSection = document.querySelector(".hero");
+
+      function resizeCanvas() {
+        canvas.width = heroSection.offsetWidth;
+        canvas.height = heroSection.offsetHeight;
+      }
+      resizeCanvas();
+      window.addEventListener("resize", resizeCanvas);
+
+      class Particle {
+        constructor(x, y) {
+          this.x = x;
+          this.y = y;
+          this.size = Math.random() * 4 + 1;
+          this.speedX = Math.random() * 2 - 1;
+          this.speedY = Math.random() * 2 - 1;
+          this.life = 100;
+          this.hue = Math.random() * 60 + 250; // Purple to blue range
+        }
+        update() {
+          this.x += this.speedX;
+          this.y += this.speedY;
+          this.life -= 1;
+          this.size *= 0.98;
+        }
+        draw() {
+          ctx.fillStyle = `hsla(${this.hue}, 80%, 60%, ${this.life / 100})`;
+          ctx.shadowBlur = 15;
+          ctx.shadowColor = `hsla(${this.hue}, 80%, 60%, 0.5)`;
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      }
+
+      heroSection.addEventListener("mousemove", (e) => {
+        const rect = heroSection.getBoundingClientRect();
+        mouse.x = e.clientX - rect.left;
+        mouse.y = e.clientY - rect.top;
+        for (let i = 0; i < 3; i++) {
+          particles.push(new Particle(mouse.x, mouse.y));
+        }
+      });
+
+      heroSection.addEventListener("mouseleave", () => {
+        mouse.x = null;
+        mouse.y = null;
+      });
+
+      function animateParticles() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        particles = particles.filter((p) => p.life > 0 && p.size > 0.3);
+        particles.forEach((p) => {
+          p.update();
+          p.draw();
+        });
+        requestAnimationFrame(animateParticles);
+      }
+      animateParticles();
     </script>
   </body>
 </html>
